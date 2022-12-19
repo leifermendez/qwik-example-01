@@ -1,4 +1,4 @@
-import { style, styled } from 'styled-vanilla-extract/qwik';
+import { style, styled } from "styled-vanilla-extract/qwik";
 
 export const header = style({});
 
@@ -35,7 +35,9 @@ export const Square = styled.div`
   display: block;
   width: var(--size);
   height: var(--size);
-  transform: rotateZ(calc(var(--rotation) * var(--state) * (var(--center) - var(--index))));
+  transform: rotateZ(
+    calc(var(--rotation) * var(--state) * (var(--center) - var(--index)))
+  );
   transition-property: transform, border-color;
   transition-duration: 5s;
   transition-timing-function: ease-in-out;
@@ -50,7 +52,9 @@ export const Square = styled.div`
   contain: strict;
 
   &${odd} {
-    --luminance: calc(1 - calc(calc(var(--index) * var(--odd-color-step)) / 256));
+    --luminance: calc(
+      1 - calc(calc(var(--index) * var(--odd-color-step)) / 256)
+    );
     background: rgb(
       calc(172 * var(--luminance)),
       calc(127 * var(--luminance)),
@@ -77,3 +81,44 @@ export const Square = styled.div`
     background: #760089;
   }
 `;
+
+export const CardBox = styled.div`
+  border: solid 2px transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  width: 800px;
+  height: 400px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  transition: all ease 110ms;
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+`;
+
+export const Input = styled.input`
+  background-color: transparent;
+  border-radius: 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border: solid 1px transparent;
+  height: 40px;
+  width: 100%;
+  color: #1a1a1a;
+`;
+
+export const ListTask = styled.ul`
+  width: 100%;
+  list-style: none;
+  margin: 0;
+`;
+
+export const ListTaskItem = styled.li``;

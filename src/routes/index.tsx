@@ -1,5 +1,5 @@
 import { component$, useStore, $ } from "@builder.io/qwik";
-import { Card, Label, ImgWrapper, Info, Img } from "../style.css";
+import { Card, Label, ImgWrapper, Info, Img } from "./index.css";
 
 export const MOCK_JSON = [
   {
